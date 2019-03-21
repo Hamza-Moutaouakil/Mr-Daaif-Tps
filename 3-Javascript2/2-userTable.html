@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="utf-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <title>Page Title</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" type="text/css" media="screen" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+     <script src="main.js"></script>
+     <style>
+          .user .card{
+               margin: 10px;
+          }
+
+          .user:hover img{
+               transform: scale(1.02);
+          }
+          .example:first-child{
+               display: none;
+          }
+          
+     </style>
+
+</head>
+<body>
+     
+     <div class="container">
+          <h1>Users List</h1>
+          <button class="btn btn-success" onclick="convertToArray()">
+               TABLE
+          </button>
+          <div class="users">
+               <div class="row">
+                    
+               </div>
+          </div>
+     </div>
+
+
+
+     
+
+     <div class="mytable" style="margin-top:20px;">
+          <table class="table">
+               <thead class="thead-dark">
+                 <tr>
+                   <th>Image</th>
+                   <th scope="col">First name</th>
+                   <th scope="col">Last name</th>
+                   <th scope="col">Email</th>
+                 </tr>
+               </thead>
+               <tbody>
+                    <tr class="example">
+                         <th class="imgusr"><img src=""></th>
+                         <td class="first-name">Mark</td>
+                         <td class="last-name">Otto</td>
+                         <td class="tr-email">@mdo</td>
+                       </tr>
+               </tbody>
+             </table>
+             
+             
+     </div>
+
+     <div id="gabaris" style="display:none">
+               <div class="col-md-4 user">
+                         <div class="card" style="width: 18rem;">
+                                   <img src="https://lorempixel.com/600/300" class="card-img-top" alt="...">
+                                   <div class="card-body">
+                                     <h5 class="card-title name">HAMZA MOUTAOUAkIL</h5>
+                                     <p class="card-text email">Email</p>
+                                     <a href="#" class="btn btn-primary">Acceder</a>
+                                   </div>
+                                 </div>
+               </div>
+     </div>
+          
+
+     <script src="node_modules/jquery/dist/jquery.min.js"></script>
+     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+     <script src="user.js"></script>
+
+          <script>
+                document.querySelector('.mytable').style.display = 'none'
+               // .cloneNode
+               var babari = document.querySelector('#gabaris .user')
+               var des = document.querySelector('.users .row')
+               users.forEach((user)=> {
+                    var copy = babari.cloneNode(true);
+                    copy.querySelector('.name').innerHTML = '<b>'+user.name.last+' '+user.name.first+'</b>';
+                    copy.querySelector('.email').innerText = user.email;
+                    copy.querySelector('img').setAttribute('src',user.picture.large);
+                    copy.classList.add(user.gender);
+                    des.appendChild(copy);
+               });
+               
+
+               // copy.querySelector('img').setAttribute('onClick','update('+index+')');
+
+               var place = document.querySelector('.example')
+               var tab = document.querySelector('tbody')
+               var alreadychecked = 0;
+               var dejaafficher=0;
+               function convertToArray(){
+
+                    //alreadychecked pour switcher entre l'affichage soit du tableau soit de la representation initiale
+                    
+                    if(!alreadychecked){ 
+                         alreadychecked=1
+                         // ocument.querySelector('.mytable').style.display = ''
+                         document.querySelector('.users').style.display = 'none' //  cacher la representation precedente afin d'afficher la presentationforme sous  tableau
+                         
+                         
+
+
+                         if(dejaafficher==0){ // cette condition permet de verifier si les elements ont ete deja charge dans le tableau afin d'eviter la redondance des lignes 
+                              dejaafficher=1
+                              for(let i=0;i<users.length;i++){
+                         var copy = place.cloneNode(true)
+                         copy.querySelector('.first-name').innerText = users[i].name.first
+                         copy.querySelector('.last-name').innerText = users[i].name.last
+                         copy.querySelector('.tr-email').innerText = users[i].emailo
+                         copy.querySelector('tr img').setAttribute('src',users[i].picture.medium)
+                         tab.appendChild(copy)
+                         document.querySelector('.mytable').style.display = '' // cacher le talbeau
+                         console.log("am here !!");
+                   }
+                         }else{
+                              document.querySelector('.mytable').style.display = '' // si les infos sont deja charger dans le tableau je change juste le style du tab qui contient les infos 
+                         }
+                         
+                    }else{
+                         alreadychecked=0
+                         document.querySelector('.users').style.display = '' //  cacher la representation tableau afin d'afficher normale
+                         document.querySelector('.mytable').style.display = 'none'   //afficher le tableau
+                         document.querySelector('.example').style.display='' //cacher le container qui contient l'example de <tr> </tr>
+
+                    }
+                    // document.querySelector('.example').style.display='hidden'
+                    // document.querySelectorAll('.example').className = "hamza"
+               }
+
+          </script>
+
+</body>
+</html>

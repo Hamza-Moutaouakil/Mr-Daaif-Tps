@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="utf-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <title>
+          
+     </title>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <style>
+          .box{
+           height: 120px;
+           background-color: black;
+           width: 100%;
+        }
+     </style>
+</head>
+<body>
+     
+     <div class="box">
+
+     </div>
+
+
+     <script>
+          let test = true
+          const box = document.querySelector('.box')
+          console.log("am in ");
+          box.style.width = '100%' 
+          // ****** ca ca marche ******** 
+               function resize(){
+                    setTimeout(()=>{
+                         let width = parseInt(box.style.width)
+                         if(width < 10) test = false ;
+                         box.style.width = (width-1)+'%';
+                         if (test)
+                              resize()
+                    },100)
+               }     
+               resize()
+
+
+     // ****** ca ca marche ******** ajouter  resize(0) a la fin 
+
+               // let width = parseInt(box.style.width)
+               //      if(width < 10) test = false ;
+               //      box.style.width = (width-0.002)+'%';
+               //      if (test)
+               // requestAnimationFrame(resize)
+          // request animation frame()
+     
+     </script>
+
+</body>
+</html>

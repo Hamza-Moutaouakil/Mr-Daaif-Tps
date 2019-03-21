@@ -1,0 +1,14 @@
+ECMAscript 5 = ES5 courant .
+Transpilation 
+Retrocompatible 
+BOM = Browser Object Model
+
+
+* document.querySelector('#container > p.para'); ==> return the first element p.para
+* document.querySelectorAll('#container > p.para'); ==> return all the elements with '#container > para'
+* para.style.padding = '30px'; / para.style.border = '30px'; / para.innerText ; / para.innerHTML; /
+ para.innerHTML += "!";(garder le texte comme il est)  != para.innerText;/
+ para.classList.add('toto); / ara.classList.toggle('para); (exemple des empoules .... ) /
+  - tester si la classse contient l'element a :
+ paras[i].classList.contains('a') => para[i].style.display = "none"
+

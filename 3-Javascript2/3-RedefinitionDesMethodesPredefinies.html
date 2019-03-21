@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="utf-8">
+     <title>Page Title</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <style>
+        
+      </style>
+</head>
+<body>
+
+   <h1 style="text-align:center">Resultat Dans la Console  !</h1>
+   <div class="box">
+      
+   </div>
+     <script src="user.js"></script>
+     <script>
+
+
+               /********** Redefinition des methodes predefini *******/
+
+
+
+          /*Redefinition de EACH*/
+
+          console.log("--------------------------------------------")
+          console.log("redefinition d'une methode EACH pour le test :")
+          console.log("--------------------------------------------")
+
+          Array.prototype.each = function(cb){
+               cb(this)
+          }
+
+          var ids = [2,3,8,12];
+          ids.each( e => console.log('in call back '+e) )
+
+
+
+          /*definition d'une WACH de test */
+     console.log("--------------------------------------------")
+     console.log("definition d'une methode WACH pour le test :")
+     console.log("--------------------------------------------")
+          Array.prototype.wach = function(cb){
+               for(let i=0; i<this.length ; i++){
+                    cb(this[i],i)
+               }
+          }
+
+          var ids = [2,3,8,12];
+          ids.wach( (e,i) => console.log('in call back '+e+' '+i) )
+
+
+                         //  parametre par defaut
+          
+     // Array.prototype.boucle = function( () => undefined{
+     //      for(let i=0; i<this.length ; i++){
+     //           cb(this[i])
+     //           }
+     //      });
+
+     //      var ids = [2,3,8,12];
+     //      ids.boucle()
+
+
+               //on implemente fill
+
+               //        Array.prototype.fill = (value) => {
+               //             for(let i=0;i<this.lenght;i++){
+               //                  this[i]=value
+               //             }
+               //             return this; //pour ajouter des traitement apres par exemple .fill().filter()........
+               //   }         
+
+               //methode map
+
+          console.log("-----------------------------------")          
+          console.log("implementation de la methode fill :")
+          console.log("-----------------------------------")
+          console.log("==> mapping avec lastnames :")
+          let lastnames = users.map(user => user.name.last)
+          console.log(lastnames)
+          console.log("==> mapping avec firstnames :")
+          let firstnames = users.map(user => user.name.first)
+          console.log(firstnames)
+
+          
+          const numbers = new Array(10)
+          .fill(0)
+          .map( _ => Math.random()*10 )
+          .forEach(e => console.log(e))
+          
+
+          // setTimeout
+
+                  //  console.log("start")
+                  //  setTimeout(()=>{
+                  //       console.log("A l'interieur de setTimeout");
+                  //  }, 0)
+                  //  console.log("end")
+
+                  //  setInterval(()=> {} , delay)
+                  //  cleatTimeout(id)
+                  //  clearInterval()
+
+
+            // test de setInterval 
+          //   const out = document.querySelector('h1.out')
+            
+          //   const tid = setInterval(()=>{
+          //      const d = new Date()
+          //      out.innerHTML = d.getSeconds()
+          //   },1)
+            
+
+
+
+     </script>
+
+
+     <script>
+     // (x,y) => { return x*y} sinon (x,y) => x*y
+     
+     </script>
+
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+      .box{
+        border: 1px solid;
+        height: 100uh;
+      }
+      .imagesdiv{
+        width: 128px;
+        background-color: blue;
+        float: left;
+        margin-bottom: 100px;
+      }
+      .details{
+        /* margin-left: auto;
+        margin-right: auto; */
+        width: 100%;
+      }
+      .titre{
+        margin-bottom: 5px;
+        
+        width: 200px;
+        text-align: left;
+        background-color:green;
+        float: left;
+      }
+      .parag{
+        margin-top: 20px;
+        background-color: red;
+        width: 500px;
+      }
+      
+      
+    </style>
+  <title>Tester bootstrap</title>
+</head>
+<body>
+  
+  <!-- NavBar -->
+  <div class="container-fluid">
+      <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+          <a class="navbar-brand" href="#">ENSET</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">A propos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+  </div>
+  <!-- End NavBar -->
+  <div class="container-fluid">
+    <!-- Debut de carousel -->
+      
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="http://lorempixel.com/g/1733/720/?45" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="http://lorempixel.com/g/1733/720/?4" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="http://lorempixel.com/g/1733/720/?98" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+    <!-- Fin de carousel -->
+        </div>
+      </div>
+
+      <!-- Images et details -->
+        <div class="container.fluid">
+          <div class="row">
+            <div  class="col-md-6">
+              <div class="imagesdiv"><img src="http://lorempixel.com/g/128/128/?4" alt="HTML5 Icon" width="128" height="128"></div>
+              <div class="details">
+                  <h2 class="titre">Hello world !</h2><br>
+                  <p class="parag">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium eveniet magnam ullam suscipit doloribus adipisci a dolorem sint facere nobis. Distinctio velit voluptates optio eos tempora dolores id, quisquam et? Rem blanditiis cumque atque commodi animi excepturi expedita, quo nam est odit quidem similique, ducimus modi minima eum libero. Nemo?</p>
+                </div>
+              
+            </div>
+            <div class="col-md-6">
+              <div class="imagesdiv"><img src="http://lorempixel.com/g/128/128/?4" alt="HTML5 Icon" width="128" height="128"></div>
+              <div class="details">
+                <h2 class="titre">Hello world !</h2><br>
+                <p class="parag">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum aut debitis distinctio expedita magnam doloremque rerum delectus sapiente neque illo, aspernatur sit. Voluptatem quasi, est aperiam in, enim et unde quia minima soluta cumque voluptate maiores eveniet iusto consectetur, ducimus odio illo molestiae possimus eligendi sed? Corporis quisquam vero magnam. </p>
+              </div>
+              
+            </div>
+            <div class="col-md-6">
+              <div class="imagesdiv"><img src="http://lorempixel.com/g/128/128/?4" alt="HTML5 Icon" width="128" height="128"></div>
+              <div class="details">
+                <h2 class="titre">Hello world !</h2><br>
+                <p class="parag">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero exercitationem labore laborum magnam reiciendis dolores alias blanditiis, aut, obcaecati quis soluta iusto debitis assumenda non nam deleniti praesentium sunt porro fugit totam eveniet animi quos! Deleniti perspiciatis magnam, nihil facere ex accusantium dicta fugit! Error cupiditate magni quia eius architecto?</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+                <div class="imagesdiv"><img src="http://lorempixel.com/g/128/128/?4" alt="HTML5 Icon" width="128" height="128"></div>
+                <div class="details">
+                  <h2 class="titre">Hello world !</h2><br>
+                  <p class="parag">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime sed neque, explicabo necessitatibus ad, expedita eum iure sint quas, tenetur aspernatur pariatur! Pariatur vel ipsum culpa hic quidem inventore illum similique, omnis deleniti animi. Repudiandae recusandae blanditiis magnam natus in, consequuntur, animi tenetur, non deserunt maiores earum architecto nihil! Et.</p>
+                </div>
+              </div>
+          </div>  
+          
+            
+        </div>
+      <!-- Fin images et details -->
+
+
+      <footer style="text-align:center">
+        <div class="alert alert-success" role="alert">
+          Hamza Moutaouakil
+        </div>
+      </footer>
+
+      <script src="node_modules/jquery/dist/jquery.min.js"></script>
+      <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+      <script src="node_modules/popper.js/dist/popper.js"></script>
+</body>
+</html>

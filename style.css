@@ -1,0 +1,68 @@
+.paragraphe{
+	color: blue;
+}
+
+
+
+div{
+	color: gray;
+}
+
+section + div {
+	color: red;
+}
+
+
+a:link { color: red }
+a:hover { color: red }
+a:visited { color: red }
+input:focus { background: yellow }
+Input[type='text']:focus { color: red }
+[checked] tous les balises ayant l'attribut checked 
+[readonly] tous les balises ayant l'attribut readonly
+
+les selecteurs hierarchiques
+
+
+p a { les a descendants de p } 
+p > a { les fils de p } 
+Section + div { 1ere div apres section } 
+Section ~ div { tous les div precedes par section  }
+#header a  {}
+#body p.rem {}
+#header .menu a {}
+
+
+p{
+	margin: 20 px 10 px;
+	border-left-width: 30px;
+	border-right-style: double;
+	border-radius: 0 0 20px 10px;
+	margin: 20px auto;
+	box-sizing: border-box;
+	overflow: hidden;
+	overflow: scroll; ajoute les scrollers dans tous les boites meme si qu'il n'en pas besoin
+	overflow: auto;
+	box-shadow: 0 4px 4px black;
+}
+
+
+
+
+	/*la dimension du box en fonction des autre box et non pas en fonction du contenu */
+
+p{
+	height: 200px;
+	height: 100px; 
+	box-sizing: border-box;
+	color: rgba(0,0,0, 0.5); 0.5 pour l'opacité mais il faut ajouter le 'a' dans 'rgba' 
+}
+
+	/*Colors*/
+
+ -  synthèse additive / soustractive.
+ -  CMJ+Noir couleur primaire de l'impression.
+ -  FF XX YY -> faut augmenter XX et YY de la meme valeur pour avoir un rouge claire
+ -  FF XX YY -> faut diminuer la val de FF pour avoir un rouge foncé
+ -  Le modèle HSL (Hue,Saturation,Luminosité) => disque de newton representée en degré
+ -  RVB on somme et on divise avec le nombre des composantes qui est 3 pour les desaturation 

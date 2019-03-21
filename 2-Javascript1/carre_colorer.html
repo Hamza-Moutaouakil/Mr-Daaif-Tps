@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="utf-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <title>Page Title</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+     <style>
+          td{
+               border: 1px dotted gray;
+               width: 40px;
+               height: 40px;
+          }
+          
+
+     </style>
+</head>
+<body>
+     
+          <form>
+                    <pre>ligne   =<input type="text" id="row" value="10" name="ligne"><br></pre>
+                    <pre>colonne =<input type="text" id="col" value="10" name="colonne"></pre><br>
+                    <input type="button" value="envoyer" onclick="afficher()">
+
+          </form>
+     <div id="out">
+          
+          
+     </div>
+     <script>
+          function makeTable(lignes,colonnes){
+               
+               console.log("ligne ="+lignes+" colonnes ="+colonnes);
+               var tb1 = '<table>'
+                   for(var i=0;i<lignes;i++){
+                        tb1 += "\t<tr>\n"
+                              for(var j=0;j<colonnes;j++){
+                                   tb1+= "<td onMouseMove='colorer2(this)'>Hamza MT</td>\n";
+                              }
+                        tb1 += "\t</tr>\n"
+                   }
+                   tb1 += "</table>"
+                   return tb1
+          }
+               function afficher(){
+                    var row = document.querySelector('#row').value
+                    var col = document.querySelector('#col').value
+                    document.querySelector('#out').innerHTML = (makeTable(row,col))
+               }
+               function colorer(td){
+                    td.style.background='black';
+               }
+               function colorer2(td){
+                    td.style.background='blue';
+               }
+               function getRandomColor(){
+
+               }
+
+     </script>
+
+</body>
+</html>
